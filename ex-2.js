@@ -13,19 +13,19 @@ function checkGradeOver70(score) {
       studentScore.push(score[i]);
     }
   };
-  if(studentScore.length >= 5)
-  {
-    return true;
-  }
-  else
-  {
-    return false;
-  };
+  return studentScore;
 };
 
 function atLeastFive(array, operation) {
   // Start coding here
-  return operation(array);
+  if(operation(array).length >= 5)
+  {
+  return true;
+  }
+  else
+  {
+    return false;
+  }
 }
 
 // Using `atLeastFive` function here

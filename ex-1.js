@@ -3,16 +3,17 @@ const employeeSalaries = [20005, 40000, 32000, 14500, 344000];
 
 function addSalary5000(previousSalary) {
   // Start coding here
-  const newEmployeeSalaries =[];
-  for(let i=0; i<employeeSalaries.length; i++){
-    newEmployeeSalaries[i] = previousSalary[i]+5000;
-  };
-    return newEmployeeSalaries ;
+    return previousSalary + 5000 ;
 };
 
 function forEach(array, operation) {
   // Start coding here
-  return operation(array);
+  const newEmployeeSalaries =[];
+  for(let i=0; i<employeeSalaries.length; i++)
+  {
+    newEmployeeSalaries.push(operation(array[i]));
+  }
+  return newEmployeeSalaries;
 };
 
 // Using `forEach` function here
